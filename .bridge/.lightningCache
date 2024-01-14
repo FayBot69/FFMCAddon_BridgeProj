@@ -1,0 +1,47 @@
+$formatVersion: 1
+#manifest
+projects/Friday Food Mod/BP/manifest.json|1705202546
+#unknown
+projects/Friday Food Mod/BP/pack_icon.png|1705202455
+projects/Friday Food Mod/RP/pack_icon.png|1705202455
+#functionTick
+projects/Friday Food Mod/BP/functions/tick.json|1705202455
+#entity
+projects/Friday Food Mod/BP/entities/player.json|1705202455|{"identifier":["minecraft:player"],"event":["minecraft:gain_bad_omen","minecraft:clear_add_bad_omen","minecraft:trigger_raid","minecraft:remove_raid_trigger"],"eventReference":["minecraft:trigger_raid","minecraft:remove_raid_trigger","minecraft:clear_add_bad_omen"],"componentGroup":["minecraft:add_bad_omen","minecraft:clear_bad_omen_spell_effect","minecraft:raid_trigger"],"family":["player"],"lootTablePath":["projects/Friday Food Mod/BP/loot_tables/empty.json"]}
+projects/Friday Food Mod/BP/entities/ele.json|1705203955|{"identifier":["ff:ele"],"event":[],"componentGroup":[]}
+#lootTable
+projects/Friday Food Mod/BP/loot_tables/empty.json|1705202455
+#clientBiome
+projects/Friday Food Mod/RP/biomes_client.json|1705202455
+#clientBlock
+projects/Friday Food Mod/RP/blocks.json|1705202455|{"identifier":[]}
+#clientSound
+projects/Friday Food Mod/RP/sounds.json|1705202455
+#clientManifest
+projects/Friday Food Mod/RP/manifest.json|1705204102|{"uuid":["4b04a35a-60f3-4837-94f2-489b3e9f4dd1"]}
+#langDef
+projects/Friday Food Mod/RP/texts/languages.json|1705202454
+#clientLang
+projects/Friday Food Mod/RP/texts/en_US.lang|1705203460|{"actionText":[]}
+#soundDefinition
+projects/Friday Food Mod/RP/sounds/sound_definitions.json|1705202455|{"identifier":[]}
+#flipbookTexture
+projects/Friday Food Mod/RP/textures/flipbook_textures.json|1705203083
+#itemTexture
+projects/Friday Food Mod/RP/textures/item_texture.json|1705203083|{"texture":[]}
+#terrainTexture
+projects/Friday Food Mod/RP/textures/terrain_texture.json|1705203083|{"texture":[]}
+#clientAnimationController
+projects/Friday Food Mod/RP/animation_controllers/ele.json|1705202921|{"identifier":["controller.animation.ele"],"state":["idle","walking"],"animationReference":["idle","walk"]}
+#clientAnimation
+projects/Friday Food Mod/RP/animations/ele.animation.json|1705202959|{"identifier":["animation.ele.move","animation.ele.walk"]}
+#clientEntity
+projects/Friday Food Mod/RP/entity/ele.json|1705203501|{"identifier":["ff:ele"],"animationReference":["idle","walk","controller","look_at_target"],"textureReference":["default"],"materialReference":["default"],"geometryReference":["default"],"animationIdentifier":["animation.ele.move","animation.ele.walk","controller.animation.ele","animation.common.look_at_target"],"materialIdentifier":["entity_alphatest"],"geometryIdentifier":["geometry.ele"],"renderControllerIdentifier":["controller.render.ele"],"texturePath":["projects/Friday Food Mod/RP/textures/entity/eletexture.png"]}
+#geometry
+projects/Friday Food Mod/RP/models/entity/ele.geo.json|1705202998|{"identifier":["geometry.ele"],"bone":["root","body","core","head","hair","eye","nose","base","middle","tip","cheek","Left","Right","leftear","rightear","leftarm","lefthand","leftleg","leftfeet","rightarm","righthand","rightleg","rightfeet"]}
+#renderController
+projects/Friday Food Mod/RP/render_controllers/ele.json|1705203041|{"identifier":["controller.render.ele"]}
+projects/Friday Food Mod/RP/render_controllers/lee.json|1705203460|{"identifier":["controller.render.lee"]}
+#texture
+projects/Friday Food Mod/RP/textures/entity/eletexture.png|1705203083
+projects/Friday Food Mod/RP/textures/entity/lee.png|1705203460
