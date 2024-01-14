@@ -1,0 +1,35 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ff:ele",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/eletexture"
+			},
+			"geometry": {
+				"default": "geometry.ele"
+			},
+			"render_controllers": [
+				"controller.render.ele"
+			],
+			"spawn_egg": {
+				"base_color": "#e4fd8b",
+				"overlay_color": "#ffef00"
+			},
+			"animations": {
+				"idle": "animation.ele.move",
+				"walk": "animation.ele.walk",
+				"controller": "controller.animation.ele",
+				"look_at_target": "animation.common.look_at_target"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

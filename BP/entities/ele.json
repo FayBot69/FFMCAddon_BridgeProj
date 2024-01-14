@@ -1,0 +1,51 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "ff:ele",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {},
+		"components": {
+			"minecraft:health": {
+				"value": 20,
+				"max": 20
+			},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": true
+			},
+			"minecraft:jump.static": {},
+			"minecraft:behavior.random_look_around": {},
+			"minecraft:behavior.random_stroll": {},
+			"minecraft:movement.basic": {},
+			"minecraft:navigation.walk": {
+				"can_open_doors": true,
+				"can_sink": false,
+				"can_swim": true,
+				"is_amphibious": true,
+				"can_pass_doors": true,
+				"can_jump": true
+			},
+			"minecraft:movement": {
+				"value": 0.2
+			},
+			"minecraft:behavior.breed": {
+				"priority": 1,
+				"speed_multiplier": 1
+			},
+			"minecraft:behavior.eat_carried_item": {
+				"delay_before_eating": 0.5
+			},
+			"minecraft:behavior.look_at_player": {
+				"look_time": [
+					1
+				],
+				"angle_of_view_vertical": 10
+			}
+		},
+		"events": {}
+	}
+}

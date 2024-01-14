@@ -1,0 +1,44 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"fridayfoodcomm"
+		]
+	},
+	"header": {
+		"name": "Friday Food Mod",
+		"description": "Bridge Project File for Friday Food Mod",
+		"min_engine_version": [
+			1,
+			20,
+			50
+		],
+		"uuid": "8b386f45-1cfa-48d7-ba66-09565420d593",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "bb9e6649-d4d9-4f2b-9796-2c8b4fa912f7",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "4b04a35a-60f3-4837-94f2-489b3e9f4dd1",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	]
+}

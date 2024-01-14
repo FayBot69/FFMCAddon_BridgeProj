@@ -1,0 +1,45 @@
+{
+	"type": "minecraftBedrock",
+	"name": "Friday Food Mod",
+	"namespace": "ff",
+	"authors": [
+		"fridayfoodcomm"
+	],
+	"targetVersion": "1.20.50",
+	"description": "Bridge Project File for Friday Food Mod",
+	"experimentalGameplay": {
+		"holidayCreatorFeatures": true,
+		"creationOfCustomBiomes": true,
+		"upcomingCreatorFeatures": true,
+		"enableGameTestFramework": false,
+		"experimentalMolangFeatures": false,
+		"educationEdition": false
+	},
+	"bdsProject": false,
+	"packs": {
+		"behaviorPack": "./BP",
+		"resourcePack": "./RP"
+	},
+	"worlds": [
+		"./worlds/*"
+	],
+	"compiler": {
+		"plugins": [
+			"generatorScripts",
+			"typeScript",
+			"entityIdentifierAlias",
+			"customEntityComponents",
+			"customItemComponents",
+			"customBlockComponents",
+			"customCommands",
+			"moLang",
+			"formatVersionCorrection",
+			[
+				"simpleRewrite",
+				{
+					"packName": "Friday Food Mod"
+				}
+			]
+		]
+	}
+}
