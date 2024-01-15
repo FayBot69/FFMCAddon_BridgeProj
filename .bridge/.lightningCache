@@ -22,13 +22,13 @@ projects/Friday Food Mod/RP/manifest.json|1705204102|{"uuid":["4b04a35a-60f3-483
 #langDef
 projects/Friday Food Mod/RP/texts/languages.json|1705202454
 #clientLang
-projects/Friday Food Mod/RP/texts/en_US.lang|1705203460|{"actionText":[]}
+projects/Friday Food Mod/RP/texts/en_US.lang|1705276628|{"actionText":[]}
 #soundDefinition
 projects/Friday Food Mod/RP/sounds/sound_definitions.json|1705202455|{"identifier":[]}
 #flipbookTexture
 projects/Friday Food Mod/RP/textures/flipbook_textures.json|1705203083
 #itemTexture
-projects/Friday Food Mod/RP/textures/item_texture.json|1705203083|{"texture":[]}
+projects/Friday Food Mod/RP/textures/item_texture.json|1705276628|{"texture":["ff_banana"],"texturePath":["projects/Friday Food Mod/RP/textures/items/banana.png"]}
 #terrainTexture
 projects/Friday Food Mod/RP/textures/terrain_texture.json|1705203083|{"texture":[]}
 #clientAnimationController
@@ -45,3 +45,6 @@ projects/Friday Food Mod/RP/render_controllers/lee.json|1705203460|{"identifier"
 #texture
 projects/Friday Food Mod/RP/textures/entity/eletexture.png|1705203083
 projects/Friday Food Mod/RP/textures/entity/lee.png|1705203460
+projects/Friday Food Mod/RP/textures/items/banana.png|1705276711
+#item
+projects/Friday Food Mod/BP/items/banana.item.json|1705276832|{"identifier":["ff:banana"],"itemTexture":["ff_banana"],"tag":[]}
