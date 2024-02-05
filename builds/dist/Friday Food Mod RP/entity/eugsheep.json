@@ -1,0 +1,35 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ff:eugsheep",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/sheeptexture"
+			},
+			"geometry": {
+				"default": "geometry.eugsheep"
+			},
+			"render_controllers": [
+				"controller.render.eugsheep"
+			],
+			"spawn_egg": {
+				"base_color": "#0c48ba",
+				"overlay_color": "#FFFFFF"
+			},
+			"animations": {
+				"idle": "animation.eugene_sheep.idle",
+				"walk": "animation.eugene_sheep.walk",
+				"controller": "controller.animation.eugsheep",
+				"look_at_target": "animation.common.look_at_target"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}
