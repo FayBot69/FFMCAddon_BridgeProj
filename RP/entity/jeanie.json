@@ -1,0 +1,33 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ff:jeanie",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/jeanietexture"
+			},
+			"geometry": {
+				"default": "geometry.jeanie"
+			},
+			"render_controllers": [
+				"controller.render.jeanie"
+			],
+			"spawn_egg": {
+				"base_color": "#ce7e00",
+				"overlay_color": "#52d720"
+			},
+			"animations": {
+				"idle": "animation.jeanie.idle",
+				"walk": "animation.jeanie.walk",
+				"angry": "animation.jeanie.angry",
+				"happy": "animation.jeanie.happy",
+				"attack": "animation.jeanie.attack",
+				"controller": "controller.animation.jeanie",
+				"look_at_target": "animation.common.look_at_target"
+			}
+		}
+	}
+}

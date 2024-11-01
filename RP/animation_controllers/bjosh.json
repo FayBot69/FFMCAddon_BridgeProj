@@ -1,7 +1,7 @@
 {
 	"format_version": "1.10.0",
 	"animation_controllers": {
-		"controller.animation.ele": {
+		"controller.animation.bjosh": {
 			"initial_state": "idle",
 			"states": {
 				"idle": {

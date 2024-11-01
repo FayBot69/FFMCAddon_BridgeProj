@@ -23,7 +23,10 @@
 				"idle": "animation.ele.move",
 				"walk": "animation.ele.walk",
 				"controller": "controller.animation.ele",
-				"look_at_target": "animation.common.look_at_target"
+				"look_at_target": "animation.common.look_at_target",
+				"angry": "animation.ele.angry",
+				"happy": "animation.ele.happy",
+				"attack": "animation.ele.attack"
 			},
 			"scripts": {
 				"animate": [

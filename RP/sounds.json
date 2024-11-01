@@ -1,1 +1,42 @@
-{}
+{
+	"entity_sounds": {
+		"entities": {
+			"ff:test": {
+				"volume": 0.1,
+				"pitch": [
+					0.76,
+					1.14
+				],
+				"events": {
+					"ambient": "mob.test.idle",
+					"hurt": "mob.test.hurt",
+					"death": "mob.test.death",
+					"takeoff": {
+						"sound": "mob.test.takeoff",
+						"volume": 0.05,
+						"pitch": [
+							0.8,
+							1.2
+						]
+					}
+				}
+			},
+			"ff:test1": {
+				"volume": 1,
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"events": {
+					"ambient": "mob.test1.idle",
+					"hurt": "mob.test1.hit",
+					"death": "mob.test1.death",
+					"death.to.zombie": "mob.test1.death",
+					"haggle": "mob.test1.haggle",
+					"haggle.yes": "mob.test1.yes",
+					"haggle.no": "mob.test1.no"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ff:rishipenguin",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/rishipenguin"
+			},
+			"geometry": {
+				"default": "geometry.rishipenguin"
+			},
+			"render_controllers": [
+				"controller.render.rishipenguin"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#990000"
+			},
+			"animations": {
+				"idle": "animation.rishipenguin.idle",
+				"walk": "animation.rishipenguin.walk",
+				"angry": "animation.rishipenguin.angry",
+				"happy": "animation.rishipenguin.happy",
+				"attack": "animation.rishipenguin.attack",
+				"controller": "controller.animation.rishi",
+				"look_at_target": "animation.common.look_at_target"
+			}
+		}
+	}
+}

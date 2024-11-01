@@ -8,24 +8,30 @@ projects/Friday Food Mod/RP/pack_icon.png|1705202455
 projects/Friday Food Mod/BP/functions/tick.json|1705202455
 #entity
 projects/Friday Food Mod/BP/entities/player.json|1705202455|{"identifier":["minecraft:player"],"event":["minecraft:gain_bad_omen","minecraft:clear_add_bad_omen","minecraft:trigger_raid","minecraft:remove_raid_trigger"],"eventReference":["minecraft:trigger_raid","minecraft:remove_raid_trigger","minecraft:clear_add_bad_omen"],"componentGroup":["minecraft:add_bad_omen","minecraft:clear_bad_omen_spell_effect","minecraft:raid_trigger"],"family":["player"],"lootTablePath":["projects/Friday Food Mod/BP/loot_tables/empty.json"]}
-projects/Friday Food Mod/BP/entities/ele.json|1707101638171|{"identifier":["ff:ele"],"event":[],"componentGroup":[]}
+projects/Friday Food Mod/BP/entities/ele.json|1730350329|{"identifier":["ff:ele"],"event":["become_angry_event","become_calm_event","admire_item_started_event","admire_item_stopped_event"],"eventReference":["admire_item_started_event","admire_item_stopped_event","become_calm_event","become_angry_event"],"componentGroup":["angry","melee_unit","interactable_piglin"]}
 projects/Friday Food Mod/BP/entities/eugsheep.json|1707101891|{"identifier":["ff:eugsheep"],"event":[],"componentGroup":[]}
+projects/Friday Food Mod/BP/entities/bjosh.json|1730348062|{"identifier":["ff:bjosh"],"event":[],"componentGroup":[]}
+projects/Friday Food Mod/BP/entities/jeanie.json|1730348897|{"identifier":["ff:jeanie"],"event":[],"componentGroup":[]}
+projects/Friday Food Mod/BP/entities/jack.json|1730348822|{"identifier":["ff:jack"],"event":[],"componentGroup":[]}
+projects/Friday Food Mod/BP/entities/rishipenguin.json|1730348938|{"identifier":["ff:rishipenguin"],"event":[],"componentGroup":[]}
+projects/Friday Food Mod/BP/entities/test.json|1730435766|{"identifier":["ff:test"],"event":["minecraft:from_player","minecraft:from_village"],"componentGroup":["minecraft:player_created","minecraft:village_created"],"family":["irongolem","mob"],"lootTablePath":["projects/Friday Food Mod/BP/loot_tables/entities/test.json"]}
+projects/Friday Food Mod/BP/entities/test1.json|1730436724|{"identifier":["ff:test1"],"event":["minecraft:entity_spawned","minecraft:entity_transformed","savage:become_self"],"eventReference":["savage:become_self"],"componentGroup":["good","better","best","become_self"],"family":["test1","mob"],"tradeTablePath":["projects/Friday Food Mod/BP/trading/economy_trades/test1_good.json","projects/Friday Food Mod/BP/trading/economy_trades/test1_better.json","projects/Friday Food Mod/BP/trading/economy_trades/test1_best.json"]}
 #lootTable
 projects/Friday Food Mod/BP/loot_tables/empty.json|1705202455
+projects/Friday Food Mod/BP/loot_tables/entities/test.json|1730435766|{"lootTablePath":[]}
 #clientBiome
-projects/Friday Food Mod/RP/biomes_client.json|1705202455
 #clientBlock
 projects/Friday Food Mod/RP/blocks.json|1705202455|{"identifier":[]}
 #clientSound
-projects/Friday Food Mod/RP/sounds.json|1705202455
+projects/Friday Food Mod/RP/sounds.json|1730436512|{"soundEvent":["ambient","hurt","death","takeoff","death.to.zombie","haggle","haggle.yes","haggle.no"]}
 #clientManifest
 projects/Friday Food Mod/RP/manifest.json|1705204102|{"uuid":["4b04a35a-60f3-4837-94f2-489b3e9f4dd1"]}
 #langDef
 projects/Friday Food Mod/RP/texts/languages.json|1705202454
 #clientLang
-projects/Friday Food Mod/RP/texts/en_US.lang|1707101252|{"actionText":[]}
+projects/Friday Food Mod/RP/texts/en_US.lang|1730436512|{"actionText":[]}
 #soundDefinition
-projects/Friday Food Mod/RP/sounds/sound_definitions.json|1705202455|{"identifier":[]}
+projects/Friday Food Mod/RP/sounds/sound_definitions.json|1730436512|{"identifier":["mob.test.death","mob.test.hit","mob.test.throw","mob.test.walk","mob.test1.death","mob.test1.haggle","mob.test1.hit","mob.test1.idle","mob.test1.no","mob.test1.yes"]}
 #flipbookTexture
 projects/Friday Food Mod/RP/textures/flipbook_textures.json|1705203083
 #itemTexture
@@ -33,26 +39,70 @@ projects/Friday Food Mod/RP/textures/item_texture.json|1705276628|{"texture":["f
 #terrainTexture
 projects/Friday Food Mod/RP/textures/terrain_texture.json|1705203083|{"texture":[]}
 #clientAnimationController
-projects/Friday Food Mod/RP/animation_controllers/ele.json|1705202921|{"identifier":["controller.animation.ele"],"state":["idle","walking"],"animationReference":["idle","walk"]}
-projects/Friday Food Mod/RP/animation_controllers/eugsheep.json|1707101896|{"identifier":["controller.animation.eugsheep"],"state":["idle","walking"],"animationReference":["idle","walk"]}
+projects/Friday Food Mod/RP/animation_controllers/ele.json|1730436641|{"identifier":["controller.animation.ele"],"state":["idle","walking","happy","angry","attacking","has_target"],"animationReference":["idle","walk","happy","angry","attack"]}
+projects/Friday Food Mod/RP/animation_controllers/eugsheep.json|1730436656|{"identifier":["controller.animation.eugsheep"],"state":["idle","walking","happy","angry","attacking","has_target"],"animationReference":["idle","walk","happy","angry","attack"]}
+projects/Friday Food Mod/RP/animation_controllers/bjosh.json|1730436624|{"identifier":["controller.animation.bjosh"],"state":["idle","walking","happy","angry","attacking","has_target"],"animationReference":["idle","walk","happy","angry","attack"]}
+projects/Friday Food Mod/RP/animation_controllers/rishi.json|1730436721|{"identifier":["controller.animation.rishi"],"state":["idle","walking","happy","angry","attacking","has_target"],"animationReference":["idle","walk","happy","angry","attack"]}
+projects/Friday Food Mod/RP/animation_controllers/jack.json|1730436668|{"identifier":["controller.animation.jack"],"state":["idle","walking","happy","angry","attacking","has_target"],"animationReference":["idle","walk","happy","angry","attack"]}
+projects/Friday Food Mod/RP/animation_controllers/jeanie.json|1730436681|{"identifier":["controller.animation.jeanie"],"state":["idle","walking","happy","angry","attacking","has_target"],"animationReference":["idle","walk","happy","angry","attack"]}
+projects/Friday Food Mod/RP/animation_controllers/test.json|1730435766|{"identifier":["controller.animation.test.arm_movement","controller.animation.test.move"],"state":["attack","default","flower","has_target"],"animationReference":["attack","move","flower","move_to_target","walk","walk_to_target"]}
+projects/Friday Food Mod/RP/animation_controllers/test1.json|1730436512|{"identifier":["controller.animation.test1.baby","controller.animation.test1.general","controller.animation.test1.move"],"state":["baby","default"],"animationReference":["baby_transform","general","look_at_target","move"]}
 #clientAnimation
-projects/Friday Food Mod/RP/animations/ele.animation.json|1705202959|{"identifier":["animation.ele.move","animation.ele.walk"]}
+projects/Friday Food Mod/RP/animations/ele.animation.json|1730345346|{"identifier":["animation.ele.move","animation.ele.walk","animation.ele.happy","animation.ele.attack","animation.ele.angry"]}
 projects/Friday Food Mod/RP/animations/eugene_sheep.animation.json|1707101324|{"identifier":["animation.eugene_sheep.idle","animation.eugene_sheep.walk","animation.eugene_sheep.angry","animation.eugene_sheep.happy","animation.eugene_sheep.attack"]}
+projects/Friday Food Mod/RP/animations/bjosh.animation.json|1730349658|{"identifier":["animation.bjosh.idle","animation.bjosh.walk","animation.bjosh.happy","animation.bjosh.attack","animation.bjosh.angry"]}
+projects/Friday Food Mod/RP/animations/jack.animation.json|1730349140|{"identifier":["animation.jack.idle","animation.jack.walk","animation.jack.happy","animation.jack.attack","animation.jack.angry"]}
+projects/Friday Food Mod/RP/animations/jeanie.animation.json|1730349142|{"identifier":["animation.jeanie.idle","animation.jeanie.walk","animation.jeanie.happy","animation.jeanie.attack","animation.jeanie.angry"]}
+projects/Friday Food Mod/RP/animations/rishipenguin.animation.json|1730349144|{"identifier":["animation.rishipenguin.idle","animation.rishipenguin.walk","animation.rishipenguin.angry","animation.rishipenguin.attack","animation.rishipenguin.happy"]}
+projects/Friday Food Mod/RP/animations/test.json|1730435766|{"identifier":["animation.test.attack","animation.test.flower","animation.test.move","animation.test.move_to_target","animation.test.walk","animation.test.walk_to_target"]}
+projects/Friday Food Mod/RP/animations/test1.json|1730436512|{"identifier":["animation.test1.baby_transform","animation.test1.general","animation.test1.general.v1.0","animation.test1.get_in_bed","animation.test1.move","animation.test1.raise_arms"]}
 #clientEntity
-projects/Friday Food Mod/RP/entity/ele.json|1705203501|{"identifier":["ff:ele"],"animationReference":["idle","walk","controller","look_at_target"],"textureReference":["default"],"materialReference":["default"],"geometryReference":["default"],"animationIdentifier":["animation.ele.move","animation.ele.walk","controller.animation.ele","animation.common.look_at_target"],"materialIdentifier":["entity_alphatest"],"geometryIdentifier":["geometry.ele"],"renderControllerIdentifier":["controller.render.ele"],"texturePath":["projects/Friday Food Mod/RP/textures/entity/eletexture.png"]}
-projects/Friday Food Mod/RP/entity/eugsheep.json|1707101889|{"identifier":["ff:eugsheep"],"animationReference":["idle","walk","controller","look_at_target"],"textureReference":["default"],"materialReference":["default"],"geometryReference":["default"],"animationIdentifier":["animation.eugene_sheep.idle","animation.eugene_sheep.walk","controller.animation.eugsheep","animation.common.look_at_target"],"materialIdentifier":["entity_alphatest"],"geometryIdentifier":["geometry.eugsheep"],"renderControllerIdentifier":["controller.render.eugsheep"],"texturePath":["projects/Friday Food Mod/RP/textures/entity/sheeptexture.png"]}
+projects/Friday Food Mod/RP/entity/ele.json|1730350337|{"identifier":["ff:ele"],"animationReference":["idle","walk","controller","look_at_target","angry","happy","attack"],"textureReference":["default"],"materialReference":["default"],"geometryReference":["default"],"animationIdentifier":["animation.ele.move","animation.ele.walk","controller.animation.ele","animation.common.look_at_target","animation.ele.angry","animation.ele.happy","animation.ele.attack"],"materialIdentifier":["entity_alphatest"],"geometryIdentifier":["geometry.ele"],"renderControllerIdentifier":["controller.render.ele"],"texturePath":["projects/Friday Food Mod/RP/textures/entity/eletexture.png"]}
+projects/Friday Food Mod/RP/entity/eugsheep.json|1730350350|{"identifier":["ff:eugsheep"],"animationReference":["idle","walk","controller","look_at_target","angry","happy","attack"],"textureReference":["default"],"materialReference":["default"],"geometryReference":["default"],"animationIdentifier":["animation.eugene_sheep.idle","animation.eugene_sheep.walk","controller.animation.eugsheep","animation.common.look_at_target","animation.eugene_sheep.angry","animation.eugene_sheep.happy","animation.eugene_sheep.attack"],"materialIdentifier":["entity_alphatest"],"geometryIdentifier":["geometry.eugsheep"],"renderControllerIdentifier":["controller.render.eugsheep"],"texturePath":["projects/Friday Food Mod/RP/textures/entity/sheeptexture.png"]}
+projects/Friday Food Mod/RP/entity/bjosh.json|1730433912|{"identifier":["ff:bjosh"],"animationReference":["idle","walk","controller","look_at_target","angry","happy","attack"],"textureReference":["default"],"materialReference":["default"],"geometryReference":["default"],"animationIdentifier":["animation.bjosh.idle","animation.bjosh.walk","controller.animation.bjosh","animation.common.look_at_target","animation.bjosh.angry","animation.bjosh.happy","animation.bjosh.attack"],"materialIdentifier":["entity_alphatest"],"geometryIdentifier":["geometry.bjosh"],"renderControllerIdentifier":["controller.render.bjosh"],"texturePath":["projects/Friday Food Mod/RP/textures/entity/bjosh.png"]}
+projects/Friday Food Mod/RP/entity/rishipenguin.json|1730433931|{"identifier":["ff:rishipenguin"],"animationReference":["idle","walk","angry","happy","attack","controller","look_at_target"],"textureReference":["default"],"materialReference":["default"],"geometryReference":["default"],"animationIdentifier":["animation.rishipenguin.idle","animation.rishipenguin.walk","animation.rishipenguin.angry","animation.rishipenguin.happy","animation.rishipenguin.attack","controller.animation.rishi","animation.common.look_at_target"],"materialIdentifier":["entity_alphatest"],"geometryIdentifier":["geometry.rishipenguin"],"renderControllerIdentifier":["controller.render.rishipenguin"],"texturePath":["projects/Friday Food Mod/RP/textures/entity/rishipenguin.png"]}
+projects/Friday Food Mod/RP/entity/jack.json|1730350353|{"identifier":["ff:jack"],"animationReference":["idle","walk","angry","happy","attack","controller","look_at_target"],"textureReference":["default"],"materialReference":["default"],"geometryReference":["default"],"animationIdentifier":["animation.jack.idle","animation.jack.walk","animation.jack.angry","animation.jack.happy","animation.jack.attack","controller.animation.jack","animation.common.look_at_target"],"materialIdentifier":["entity_alphatest"],"geometryIdentifier":["geometry.jack"],"renderControllerIdentifier":["controller.render.jack"],"texturePath":["projects/Friday Food Mod/RP/textures/entity/jacktexture.png"]}
+projects/Friday Food Mod/RP/entity/jeanie.json|1730433916|{"identifier":["ff:jeanie"],"animationReference":["idle","walk","angry","happy","attack","controller","look_at_target"],"textureReference":["default"],"materialReference":["default"],"geometryReference":["default"],"animationIdentifier":["animation.jeanie.idle","animation.jeanie.walk","animation.jeanie.angry","animation.jeanie.happy","animation.jeanie.attack","controller.animation.jeanie","animation.common.look_at_target"],"materialIdentifier":["entity_alphatest"],"geometryIdentifier":["geometry.jeanie"],"renderControllerIdentifier":["controller.render.jeanie"],"texturePath":["projects/Friday Food Mod/RP/textures/entity/jeanietexture.png"]}
+projects/Friday Food Mod/RP/entity/test.json|1730435766|{"identifier":["ff:test"],"animationReference":["walk","move","walk_to_target","move_to_target","attack","flower","look_at_target","move_controller","arm_controller"],"textureReference":["default"],"materialReference":["default"],"geometryReference":["default"],"animationIdentifier":["animation.test.walk","animation.test.move","animation.test.walk_to_target","animation.test.move_to_target","animation.test.attack","animation.test.flower","animation.common.look_at_target","controller.animation.test.move","controller.animation.test.arm_movement"],"materialIdentifier":["iron_golem"],"geometryIdentifier":["geometry.test"],"renderControllerIdentifier":["controller.render.test"],"texturePath":["projects/Friday Food Mod/RP/textures/entity/test.png"]}
+projects/Friday Food Mod/RP/entity/test1.json|1730436723|{"identifier":["ff:test1"],"animationReference":["general","look_at_target","raise_arms","move"],"textureReference":["default"],"materialReference":["default"],"geometryReference":["default"],"animationIdentifier":["animation.test1.general","animation.common.look_at_target","animation.test1.raise_arms","animation.test1.move","controller.animation.test1.general","controller.animation.test1_v2.raise_arms","controller.animation.test1.move"],"materialIdentifier":["villager"],"geometryIdentifier":["geometry.test1"],"renderControllerIdentifier":["controller.render.test1"],"texturePath":["projects/Friday Food Mod/RP/textures/entity/test1.png"]}
 #geometry
 projects/Friday Food Mod/RP/models/entity/ele.geo.json|1705202998|{"identifier":["geometry.ele"],"bone":["root","body","core","head","hair","eye","nose","base","middle","tip","cheek","Left","Right","leftear","rightear","leftarm","lefthand","leftleg","leftfeet","rightarm","righthand","rightleg","rightfeet"]}
 projects/Friday Food Mod/RP/models/entity/EugeneSheep.geo.json|1707101252|{"identifier":["geometry.eugsheep"],"bone":["root","body","head","face","horn","hair","leftarm","arm","hand","rightarm","arm2","hand2","leftleg","rightleg"]}
+projects/Friday Food Mod/RP/models/entity/BlackJosh.geo.json|1730348062|{"identifier":["geometry.bjosh"],"bone":["root","body"]}
+projects/Friday Food Mod/RP/models/entity/rishipenguin.geo.json|1730348938|{"identifier":["geometry.rishipenguin"],"bone":["root","head","body","wingl","wingr"]}
+projects/Friday Food Mod/RP/models/entity/jack.geo.json|1730348822|{"identifier":["geometry.jack"],"bone":["root","body","head","facehappy","faceangry","faceneutral","leftarm","rightarm","tail","rightleg","leftleg"]}
+projects/Friday Food Mod/RP/models/entity/jeanie.geo.json|1730348897|{"identifier":["geometry.jeanie"],"bone":["root","body","head","neutral","happy","angry","rightarm","leftarm","rightleg","leftleg"]}
+projects/Friday Food Mod/RP/models/entity/test.json|1730435766|{"identifier":["geometry.test"],"bone":["body","head","arm0","arm1","leg0","leg1"]}
+projects/Friday Food Mod/RP/models/entity/test1.json|1730436512|{"identifier":["geometry.test1"],"bone":["head","nose","body","arms","leg0","leg1"]}
 #renderController
 projects/Friday Food Mod/RP/render_controllers/ele.json|1705203041|{"identifier":["controller.render.ele"]}
 projects/Friday Food Mod/RP/render_controllers/lee.json|1705203460|{"identifier":["controller.render.lee"]}
 projects/Friday Food Mod/RP/render_controllers/eugsheep.json|1707101252|{"identifier":["controller.render.eugsheep"]}
+projects/Friday Food Mod/RP/render_controllers/bjosh.json|1730348062|{"identifier":["controller.render.bjosh"]}
+projects/Friday Food Mod/RP/render_controllers/jack.json|1730348822|{"identifier":["controller.render.jack"]}
+projects/Friday Food Mod/RP/render_controllers/jeanie.json|1730348897|{"identifier":["controller.render.jeanie"]}
+projects/Friday Food Mod/RP/render_controllers/rishipenguin.json|1730348938|{"identifier":["controller.render.rishipenguin"]}
+projects/Friday Food Mod/RP/render_controllers/test.json|1730435766|{"identifier":["controller.render.test"]}
+projects/Friday Food Mod/RP/render_controllers/test1.json|1730436512|{"identifier":["controller.render.test1"]}
 #texture
 projects/Friday Food Mod/RP/textures/entity/eletexture.png|1705203083
 projects/Friday Food Mod/RP/textures/entity/lee.png|1705203460
 projects/Friday Food Mod/RP/textures/items/banana.png|1705276711
-projects/Friday Food Mod/RP/textures/entity/sheeptexture.png|1707101252
+projects/Friday Food Mod/RP/textures/entity/sheeptexture.png|1707101389
+projects/Friday Food Mod/RP/textures/entity/bjosh.png|1730348061
+projects/Friday Food Mod/RP/textures/entity/jeanietexture.png|1730348897
+projects/Friday Food Mod/RP/textures/entity/jacktexture.png|1730348822
+projects/Friday Food Mod/RP/textures/entity/rishipenguin.png|1730348938
+projects/Friday Food Mod/RP/textures/entity/test.png|1730435766
+projects/Friday Food Mod/RP/textures/entity/test1.png|1730436512
 #item
 projects/Friday Food Mod/BP/items/banana.item.json|1705276832|{"identifier":["ff:banana"],"itemTexture":["ff_banana"],"tag":[]}
 #animationController
+#biomesClient
+projects/Friday Food Mod/RP/biomes_client.json|1705202455
+#spawnRule
+projects/Friday Food Mod/BP/spawn_rules/test1.json|1730436512|{"identifier":["ff:test1"]}
+#tradeTable
+projects/Friday Food Mod/BP/trading/economy_trades/test1_best.json|1730436512
+projects/Friday Food Mod/BP/trading/economy_trades/test1_better.json|1730436512
+projects/Friday Food Mod/BP/trading/economy_trades/test1_good.json|1730436512

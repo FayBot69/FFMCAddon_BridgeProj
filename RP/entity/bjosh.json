@@ -1,0 +1,33 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ff:bjosh",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/bjosh"
+			},
+			"geometry": {
+				"default": "geometry.bjosh"
+			},
+			"render_controllers": [
+				"controller.render.bjosh"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#141a37"
+			},
+			"animations": {
+				"idle": "animation.bjosh.idle",
+				"walk": "animation.bjosh.walk",
+				"controller": "controller.animation.bjosh",
+				"look_at_target": "animation.common.look_at_target",
+				"angry": "animation.bjosh.angry",
+				"happy": "animation.bjosh.happy",
+				"attack": "animation.bjosh.attack"
+			}
+		}
+	}
+}

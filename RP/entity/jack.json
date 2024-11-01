@@ -1,0 +1,33 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ff:jack",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/jacktexture"
+			},
+			"geometry": {
+				"default": "geometry.jack"
+			},
+			"render_controllers": [
+				"controller.render.jack"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#FFFFFF"
+			},
+			"animations": {
+				"idle": "animation.jack.idle",
+				"walk": "animation.jack.walk",
+				"angry": "animation.jack.angry",
+				"happy": "animation.jack.happy",
+				"attack": "animation.jack.attack",
+				"controller": "controller.animation.jack",
+				"look_at_target": "animation.common.look_at_target"
+			}
+		}
+	}
+}
