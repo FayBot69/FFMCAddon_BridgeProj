@@ -32,7 +32,8 @@
 				"animate": [
 					"controller"
 				]
-			}
+			},
+			"enable_attachables": true
 		}
 	}
 }

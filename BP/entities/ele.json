@@ -582,6 +582,20 @@
 						"barter": true
 					}
 				]
+			},
+			"minecraft:behavior.sleep": {},
+			"minecraft:behavior.snacking": {},
+			"minecraft:barter": {
+				"cooldown_after_being_attacked": 6,
+				"barter_table": {}
+			},
+			"minecraft:behavior.celebrate": {
+				"priority": 6
+			},
+			"minecraft:behavior.charge_attack": {},
+			"minecraft:behavior.defend_trusted_target": {
+				"priority": 4,
+				"attack_interval": 4
 			}
 		},
 		"events": {

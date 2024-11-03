@@ -27,7 +27,8 @@
 				"attack": "animation.jack.attack",
 				"controller": "controller.animation.jack",
 				"look_at_target": "animation.common.look_at_target"
-			}
+			},
+			"enable_attachables": true
 		}
 	}
 }

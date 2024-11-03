@@ -7,8 +7,439 @@
 			"is_summonable": true,
 			"is_experimental": false
 		},
-		"component_groups": {},
-		"components": {},
-		"events": {}
+		"component_groups": {
+			"minecraft:celebrate": {
+				"minecraft:behavior.celebrate_survive": {
+					"priority": 5,
+					"fireworks_interval": {
+						"range_min": 2,
+						"range_max": 7
+					},
+					"duration": 30,
+					"on_celebration_end_event": {
+						"event": "minecraft:stop_celebrating",
+						"target": "self"
+					}
+				},
+				"minecraft:behavior.move_outdoors": {
+					"priority": 2,
+					"speed_multiplier": 0.8,
+					"timeout_cooldown": 8
+				}
+			},
+			"become_villager_v2": {
+				"minecraft:transformation": {
+					"into": "minecraft:villager_v2",
+					"keep_level": true
+				}
+			},
+			"behavior_peasant": {
+				"minecraft:shareables": {
+					"items": [
+						{
+							"item": "minecraft:bread",
+							"want_amount": 3,
+							"surplus_amount": 6,
+							"stored_in_inventory": true
+						},
+						{
+							"item": "minecraft:beef",
+							"want_amount": 60,
+							"surplus_amount": 4,
+							"stored_in_inventory": true
+						},
+						{
+							"item": "minecraft:copper_block",
+							"want_amount": 60,
+							"surplus_amount": 24,
+							"stored_in_inventory": true
+						},
+						{
+							"item": "minecraft:diorite",
+							"want_amount": 60,
+							"surplus_amount": 24,
+							"stored_in_inventory": true
+						},
+						{
+							"item": "minecraft:potato",
+							"want_amount": 64,
+							"surplus_amount": 64,
+							"stored_in_inventory": true,
+							"pickup_only": true
+						},
+						{
+							"item": "minecraft:copper_bulb",
+							"want_amount": 64,
+							"surplus_amount": 64,
+							"stored_in_inventory": true,
+							"pickup_only": true
+						},
+						{
+							"item": "minecraft:wheat",
+							"want_amount": 45,
+							"surplus_amount": 18,
+							"craft_into": "minecraft:bread",
+							"stored_in_inventory": true
+						}
+					]
+				},
+				"minecraft:behavior.harvest_farm_block": {
+					"priority": 9,
+					"speed_multiplier": 0.5
+				},
+				"minecraft:trade_table": {
+					"display_name": "entity.jack.worker",
+					"table": "trading/cleric_trades.json",
+					"convert_trades_economy": true
+				}
+			},
+			"behavior_non_peasant": {
+				"minecraft:shareables": {
+					"items": [
+						{
+							"item": "minecraft:bread",
+							"want_amount": 3,
+							"surplus_amount": 6,
+							"stored_in_inventory": true
+						},
+						{
+							"item": "minecraft:beef",
+							"want_amount": 12,
+							"surplus_amount": 24,
+							"stored_in_inventory": true
+						},
+						{
+							"item": "minecraft:copper_block",
+							"want_amount": 12,
+							"surplus_amount": 24,
+							"stored_in_inventory": true
+						},
+						{
+							"item": "minecraft:diorite",
+							"want_amount": 12,
+							"surplus_amount": 24,
+							"stored_in_inventory": true
+						}
+					]
+				},
+				"minecraft:trade_table": {
+					"display_name": "entity.jack.engineer",
+					"table": "trading/cleric_trades.json",
+					"convert_trades_economy": true
+				}
+			},
+			"baby": {
+				"minecraft:is_baby": {},
+				"minecraft:scale": {
+					"value": 0.5
+				},
+				"minecraft:ageable": {
+					"duration": 1200,
+					"grow_up": {
+						"event": "minecraft:ageable_grow_up",
+						"target": "self"
+					}
+				},
+				"minecraft:behavior.take_flower": {
+					"priority": 7,
+					"filters": {
+						"all_of": [
+							{
+								"test": "is_daytime",
+								"value": true
+							}
+						]
+					}
+				},
+				"minecraft:behavior.play": {
+					"priority": 8,
+					"speed_multiplier": 0.32
+				}
+			},
+			"adult": {
+				"minecraft:behavior.make_love": {
+					"priority": 6
+				},
+				"minecraft:behavior.receive_love": {
+					"priority": 7
+				}
+			}
+		},
+		"components": {
+			"minecraft:is_hidden_when_invisible": {},
+			"minecraft:type_family": {
+				"family": [
+					"animal",
+					"villager"
+				]
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0
+			},
+			"minecraft:health": {
+				"value": 20,
+				"max": 20
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 1.1,
+				"height": 2.1
+			},
+			"minecraft:nameable": {},
+			"minecraft:movement": {
+				"value": 0.7
+			},
+			"minecraft:navigation.walk": {
+				"is_amphibious": true,
+				"can_path_over_water": true,
+				"can_pass_doors": true,
+				"can_open_doors": true,
+				"can_walk": true,
+				"avoid_water": false
+			},
+			"minecraft:annotation.open_door": {},
+			"minecraft:movement.basic": {},
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:inventory": {
+				"inventory_size": 64,
+				"private": true
+			},
+			"minecraft:persistent": {},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:behavior.trade_with_player": {
+				"priority": 1,
+				"filters": {
+					"all_of": [
+						{
+							"all_of": [
+								{
+									"test": "in_water",
+									"value": false
+								}
+							]
+						},
+						{
+							"any_of": [
+								{
+									"test": "on_ground",
+									"value": true
+								},
+								{
+									"test": "is_sleeping",
+									"value": true
+								}
+							]
+						}
+					]
+				}
+			},
+			"minecraft:behavior.look_at_trading_player": {
+				"priority": 2
+			},
+			"minecraft:behavior.panic": {
+				"priority": 3,
+				"speed_multiplier": 0.6
+			},
+			"minecraft:behavior.avoid_mob_type": {
+				"priority": 3,
+				"entity_types": [
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "zombie"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "zombie_villager"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "illager"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "vex"
+								}
+							]
+						},
+						"max_dist": 8,
+						"walk_speed_multiplier": 0.6,
+						"sprint_speed_multiplier": 0.6
+					}
+				]
+			},
+			"minecraft:behavior.move_indoors": {
+				"priority": 4,
+				"speed_multiplier": 0.8
+			},
+			"minecraft:behavior.restrict_open_door": {
+				"priority": 5
+			},
+			"minecraft:behavior.open_door": {
+				"priority": 6,
+				"close_door_after": true
+			},
+			"minecraft:behavior.share_items": {
+				"priority": 8,
+				"max_dist": 3,
+				"goal_radius": 2,
+				"speed_multiplier": 0.5,
+				"entity_types": [
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "animal"
+						}
+					}
+				]
+			},
+			"minecraft:behavior.pickup_items": {
+				"priority": 9,
+				"max_dist": 3,
+				"goal_radius": 2,
+				"speed_multiplier": 0.5,
+				"can_pickup_to_hand_or_equipment": true
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 11,
+				"speed_multiplier": 0.6
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 12,
+				"look_distance": 8,
+				"probability": 0.02
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"sequence": [
+					{
+						"filters": {
+							"test": "has_component",
+							"operator": "!=",
+							"value": "minecraft:variant"
+						},
+						"randomize": [
+							{
+								"weight": 5,
+								"add": {
+									"component_groups": [
+										"baby"
+									]
+								}
+							},
+							{
+								"weight": 95,
+								"add": {
+									"component_groups": [
+										"adult"
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			"minecraft:entity_transformed": {
+				"sequence": [
+					{
+						"filters": {
+							"test": "has_component",
+							"subject": "other",
+							"value": "minecraft:is_baby"
+						},
+						"add": {
+							"component_groups": [
+								"baby"
+							]
+						}
+					},
+					{
+						"filters": {
+							"test": "has_component",
+							"subject": "other",
+							"operator": "!=",
+							"value": "minecraft:is_baby"
+						},
+						"add": {
+							"component_groups": [
+								"adult"
+							]
+						}
+					}
+				]
+			},
+			"minecraft:entity_born": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"baby"
+							]
+						}
+					}
+				]
+			},
+			"minecraft:ageable_grow_up": {
+				"sequence": [
+					{
+						"remove": {
+							"component_groups": [
+								"baby"
+							]
+						},
+						"add": {
+							"component_groups": [
+								"adult"
+							]
+						}
+					}
+				]
+			},
+			"minecraft:start_celebrating": {
+				"add": {
+					"component_groups": [
+						"minecraft:celebrate"
+					]
+				}
+			},
+			"minecraft:stop_celebrating": {
+				"remove": {
+					"component_groups": [
+						"minecraft:celebrate"
+					]
+				}
+			}
+		}
 	}
 }
