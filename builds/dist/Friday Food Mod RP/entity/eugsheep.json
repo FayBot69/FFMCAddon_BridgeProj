@@ -23,13 +23,17 @@
 				"idle": "animation.eugene_sheep.idle",
 				"walk": "animation.eugene_sheep.walk",
 				"controller": "controller.animation.eugsheep",
-				"look_at_target": "animation.common.look_at_target"
+				"look_at_target": "animation.common.look_at_target",
+				"angry": "animation.eugene_sheep.angry",
+				"happy": "animation.eugene_sheep.happy",
+				"attack": "animation.eugene_sheep.attack"
 			},
 			"scripts": {
 				"animate": [
 					"controller"
 				]
-			}
+			},
+			"enable_attachables": true
 		}
 	}
 }

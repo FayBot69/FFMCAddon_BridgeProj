@@ -89,7 +89,7 @@
 							"admire": true,
 							"use_item": true,
 							"cooldown_after_being_attacked": 20,
-							"interact_text": "action.interact.barter"
+							"interact_text": "Barter"
 						}
 					]
 				}
@@ -587,7 +587,7 @@
 			"minecraft:behavior.snacking": {},
 			"minecraft:barter": {
 				"cooldown_after_being_attacked": 6,
-				"barter_table": {}
+				"barter_table": "loot_tables/entities/piglin_barter.json"
 			},
 			"minecraft:behavior.celebrate": {
 				"priority": 6
@@ -596,6 +596,27 @@
 			"minecraft:behavior.defend_trusted_target": {
 				"priority": 4,
 				"attack_interval": 4
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 2,
+				"entity_types": [
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "monster"
+						},
+						"max_dist": 28
+					}
+				],
+				"must_see": true
+			},
+			"minecraft:is_hidden_when_invisible_copy": {},
+			"minecraft:attack": {
+				"damage": {
+					"range_min": 7,
+					"range_max": 21
+				}
 			}
 		},
 		"events": {

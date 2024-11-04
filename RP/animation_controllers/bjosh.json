@@ -19,7 +19,7 @@
 							"angry": "query.is_angry"
 						},
 						{
-							"attacking": "variable.attack_animation_tick > 0.0"
+							"attack": "variable.attack_animation_tick > 0.0"
 						}
 					]
 				},
@@ -53,7 +53,7 @@
 						}
 					]
 				},
-				"attacking": {
+				"attack": {
 					"animations": [
 						"attack"
 					],

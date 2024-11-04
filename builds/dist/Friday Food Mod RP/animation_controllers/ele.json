@@ -11,6 +11,15 @@
 					"transitions": [
 						{
 							"walking": "query.ground_speed"
+						},
+						{
+							"happy": "query.is_celebrating"
+						},
+						{
+							"angry": "query.is_angry"
+						},
+						{
+							"attack": "variable.attack_animation_tick>0"
 						}
 					]
 				},
@@ -21,6 +30,52 @@
 					"transitions": [
 						{
 							"idle": "!query.ground_speed"
+						}
+					]
+				},
+				"happy": {
+					"animations": [
+						"happy"
+					],
+					"transitions": [
+						{
+							"idle": "!query.is_celebrating"
+						}
+					]
+				},
+				"angry": {
+					"animations": [
+						"angry"
+					],
+					"transitions": [
+						{
+							"idle": "!query.is_angry"
+						}
+					]
+				},
+				"attack": {
+					"animations": [
+						"attack"
+					],
+					"transitions": [
+						{
+							"default": "!query.has_target&&variable.attack_animation_tick<=0"
+						},
+						{
+							"has_target": "query.has_target&&variable.attack_animation_tick<=0"
+						}
+					]
+				},
+				"has_target": {
+					"animations": [
+						"walk"
+					],
+					"transitions": [
+						{
+							"attack": "variable.attack_animation_tick>0"
+						},
+						{
+							"default": "!query.has_target"
 						}
 					]
 				}

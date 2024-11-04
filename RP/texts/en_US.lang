@@ -15,3 +15,7 @@ item.spawn_egg.entity.ff:test.name=Spawn Test
 entity.ff:test.name=Test
 item.spawn_egg.entity.ff:test1.name=Spawn test1
 entity.ff:test1.name=test1
+item.spawn_egg.entity.ff:yuruicloud.name=Spawn Yurui Cloud
+entity.ff:yuruicloud.name=Yurui Cloud
+item.spawn_egg.entity.ff:bellacroc.name=Spawn Bella Croc
+entity.ff:bellacroc.name=Bella Croc

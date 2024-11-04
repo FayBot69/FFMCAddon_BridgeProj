@@ -1,0 +1,38 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ff:yuruicloud",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/yuruicloudtexture"
+			},
+			"geometry": {
+				"default": "geometry.yurui_cloud"
+			},
+			"render_controllers": [
+				"controller.render.yuruicloud"
+			],
+			"spawn_egg": {
+				"base_color": "#ffffff",
+				"overlay_color": "#6a329f"
+			},
+			"animations": {
+				"idle": "animation.yurui_cloud.idle",
+				"walk": "animation.yurui_cloud.walk",
+				"controller": "controller.animation.yuruicloud",
+				"look_at_target": "animation.common.look_at_target",
+				"angry": "animation.yurui_cloud.angry",
+				"happy": "animation.yurui_cloud.happy",
+				"attack": "animation.yurui_cloud.attack"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

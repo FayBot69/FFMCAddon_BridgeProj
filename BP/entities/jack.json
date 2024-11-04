@@ -27,12 +27,6 @@
 					"timeout_cooldown": 8
 				}
 			},
-			"become_villager_v2": {
-				"minecraft:transformation": {
-					"into": "minecraft:villager_v2",
-					"keep_level": true
-				}
-			},
 			"behavior_peasant": {
 				"minecraft:shareables": {
 					"items": [
@@ -61,7 +55,7 @@
 							"stored_in_inventory": true
 						},
 						{
-							"item": "minecraft:potato",
+							"item": "minecraft:sticky_piston",
 							"want_amount": 64,
 							"surplus_amount": 64,
 							"stored_in_inventory": true,
@@ -75,10 +69,10 @@
 							"pickup_only": true
 						},
 						{
-							"item": "minecraft:wheat",
+							"item": "minecraft:redstone",
 							"want_amount": 45,
 							"surplus_amount": 18,
-							"craft_into": "minecraft:bread",
+							"craft_into": "minecraft:redstone_block",
 							"stored_in_inventory": true
 						}
 					]
@@ -89,7 +83,7 @@
 				},
 				"minecraft:trade_table": {
 					"display_name": "entity.jack.worker",
-					"table": "trading/cleric_trades.json",
+					"table": "trading/economy_trades/weapon_smith_trades.json",
 					"convert_trades_economy": true
 				}
 			},
@@ -124,7 +118,7 @@
 				},
 				"minecraft:trade_table": {
 					"display_name": "entity.jack.engineer",
-					"table": "trading/cleric_trades.json",
+					"table": "trading/tool_smith_trades.json",
 					"convert_trades_economy": true
 				}
 			},
@@ -163,6 +157,56 @@
 				"minecraft:behavior.receive_love": {
 					"priority": 7
 				}
+			},
+			"angry": {
+				"minecraft:angry": {
+					"duration": 30,
+					"broadcast_anger": true,
+					"broadcast_anger_on_attack": true,
+					"broadcast_anger_on_being_attacked": true,
+					"broadcast_range": 16,
+					"broadcast_targets": [
+						"ele"
+					],
+					"calm_event": {
+						"event": "become_calm_event",
+						"target": "self"
+					},
+					"filters": {
+						"all_of": [
+							{
+								"test": "is_family",
+								"subject": "other",
+								"operator": "!=",
+								"value": "piglin"
+							},
+							{
+								"test": "has_component",
+								"subject": "self",
+								"operator": "!=",
+								"value": "minecraft:attack_cooldown"
+							}
+						]
+					},
+					"angry_sound": "angry",
+					"sound_interval": {
+						"range_min": 2,
+						"range_max": 5
+					}
+				}
+			},
+			"melee_unit": {
+				"minecraft:behavior.melee_box_attack": {
+					"priority": 8,
+					"speed_multiplier": 1,
+					"track_target": true
+				},
+				"minecraft:attack": {
+					"damage": 5
+				},
+				"minecraft:variant": {
+					"value": 1
+				}
 			}
 		},
 		"components": {
@@ -197,7 +241,7 @@
 			},
 			"minecraft:collision_box": {
 				"width": 1.1,
-				"height": 2.1
+				"height": 2.4
 			},
 			"minecraft:nameable": {},
 			"minecraft:movement": {
@@ -338,7 +382,36 @@
 				"is_pushable": true,
 				"is_pushable_by_piston": true
 			},
-			"minecraft:conditional_bandwidth_optimization": {}
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:behavior.defend_trusted_target": {
+				"priority": 4,
+				"attack_interval": 4
+			},
+			"minecraft:trade_table": {
+				"display_name": "Jack Neko Maid",
+				"table": "trading/tool_smith_trades.json",
+				"convert_trades_economy": true
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 2,
+				"entity_types": [
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "monster"
+						},
+						"max_dist": 28
+					}
+				],
+				"must_see": true
+			},
+			"minecraft:attack": {
+				"damage": {
+					"range_min": 7,
+					"range_max": 21
+				}
+			}
 		},
 		"events": {
 			"minecraft:entity_spawned": {
@@ -437,6 +510,20 @@
 				"remove": {
 					"component_groups": [
 						"minecraft:celebrate"
+					]
+				}
+			},
+			"become_angry_event": {
+				"add": {
+					"component_groups": [
+						"angry"
+					]
+				}
+			},
+			"become_calm_event": {
+				"remove": {
+					"component_groups": [
+						"angry"
 					]
 				}
 			}

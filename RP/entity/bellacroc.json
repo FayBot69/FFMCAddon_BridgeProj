@@ -1,0 +1,38 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ff:bellacroc",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/croc_texture"
+			},
+			"geometry": {
+				"default": "geometry.bellacroc"
+			},
+			"render_controllers": [
+				"controller.render.bellacroc"
+			],
+			"spawn_egg": {
+				"base_color": "#6faf54",
+				"overlay_color": "#d5bf7a"
+			},
+			"animations": {
+				"idle": "animation.bellacroc.idle",
+				"walk": "animation.bellacroc.walk",
+				"controller": "controller.animation.bellacroc",
+				"look_at_target": "animation.common.look_at_target",
+				"angry": "animation.bellacroc.angry",
+				"happy": "animation.bellacroc.happy",
+				"attack": "animation.bellacroc.attack"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

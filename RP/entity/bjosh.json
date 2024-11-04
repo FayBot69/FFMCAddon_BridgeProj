@@ -27,6 +27,11 @@
 				"angry": "animation.bjosh.angry",
 				"happy": "animation.bjosh.happy",
 				"attack": "animation.bjosh.attack"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
 			}
 		}
 	}

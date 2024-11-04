@@ -132,6 +132,11 @@
 						0.16,
 						0.5
 					]
+				},
+				"minecraft:angry": {
+					"broadcast_anger": true,
+					"broadcast_anger_on_attack": true,
+					"duration": 5
 				}
 			}
 		},
@@ -247,7 +252,7 @@
 			},
 			"minecraft:nameable": {},
 			"minecraft:despawn": {
-				"despawn_from_distance": {}
+				"despawn_from_chance": true
 			},
 			"minecraft:behavior.slime_float": {
 				"priority": 1,
@@ -276,7 +281,7 @@
 								{
 									"test": "is_family",
 									"subject": "other",
-									"value": "player"
+									"value": "monster"
 								},
 								{
 									"test": "is_family",
@@ -305,6 +310,21 @@
 				"mob_effects": [
 					"oozing"
 				]
+			},
+			"minecraft:behavior.defend_trusted_target": {
+				"priority": 4,
+				"attack_interval": 4
+			},
+			"minecraft:trade_table": {
+				"display_name": "Josh Blob",
+				"table": "trading/economy_trades/stone_mason_trades.json",
+				"convert_trades_economy": true
+			},
+			"minecraft:attack": {
+				"damage": {
+					"range_min": 7,
+					"range_max": 21
+				}
 			}
 		}
 	}

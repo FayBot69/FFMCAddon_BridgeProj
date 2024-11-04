@@ -27,6 +27,11 @@
 				"attack": "animation.rishipenguin.attack",
 				"controller": "controller.animation.rishi",
 				"look_at_target": "animation.common.look_at_target"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
 			}
 		}
 	}
