@@ -27,7 +27,7 @@
 				"height": 1
 			},
 			"minecraft:movement": {
-				"value": 0.2
+				"value": 0.1
 			},
 			"minecraft:navigation.float": {
 				"can_path_over_water": true
